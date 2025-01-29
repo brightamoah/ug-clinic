@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fas{
+  font-family: FontAwesome, fa-solid-900;
+}
+
+.far{
+  font-family: FontAwesome, fa-regular-400;
+}
+
+.fab{
+  font-family: FontAwesome, fa-brands-400;
+}
+
+ActionBar {
+  background-color: #2E6FF3;
+  color: white;
+}

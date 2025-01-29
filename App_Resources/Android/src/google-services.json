@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "256942591294",
+    "project_id": "ug-clinic",
+    "storage_bucket": "ug-clinic.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256942591294:android:8334e05c239bcce78c706f",
+        "android_client_info": {
+          "package_name": "org.nativescript.ugclinic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1-gueXH0SOGfz1fWABfy9smGvGqHbiMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

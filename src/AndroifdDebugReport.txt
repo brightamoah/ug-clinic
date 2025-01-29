@@ -1,0 +1,29 @@
+in the project root directory and run the following command:
+cd platforms
+cd android 
+./gradlew signingReport
+
+Variant: debug
+Config: debug
+Store: C:\Users\LENOVO. sm\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 13:9D:BC:61:6A:ED:75:45:C1:5C:53:88:1D:36:D3:E5
+SHA1: C4:3F:2A:FB:39:82:39:89:DD:3A:30:41:91:36:AC:29:64:6F:B7:88
+SHA-256: 60:C5:E1:6B:DC:83:ED:06:F0:DA:56:CD:AC:1A:BB:CE:2D:0B:17:09:4B:4B:E4:E0:65:A8:FD:BC:E4:47:C6:05
+Valid until: Saturday, November 28, 2054
+----------
+Variant: release
+Config: release
+Store: null
+Alias: null
+----------
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\LENOVO. sm\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 13:9D:BC:61:6A:ED:75:45:C1:5C:53:88:1D:36:D3:E5
+SHA1: C4:3F:2A:FB:39:82:39:89:DD:3A:30:41:91:36:AC:29:64:6F:B7:88
+SHA-256: 60:C5:E1:6B:DC:83:ED:06:F0:DA:56:CD:AC:1A:BB:CE:2D:0B:17:09:4B:4B:E4:E0:65:A8:FD:BC:E4:47:C6:05
+Valid until: Saturday, November 28, 2054
+----------
+1 actionable task: 1 executed
