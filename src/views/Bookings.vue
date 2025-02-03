@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { SVGView } from "@nativescript-community/ui-svg";
 import { alert } from "@nativescript/core";
+import { TNSFancyAlert } from "@nstudio/nativescript-fancyalert";
 import { ref } from "nativescript-vue";
 import AuthButton from "~/components/auth/AuthButton.vue";
 import Comments from "~/components/bookings/Comments.vue";
@@ -90,8 +91,15 @@ const saveAppointment = async () => {
          await bookingStore.updateDoctorTimeSlots(doctor.id, updatedTimeSlots);
       }
 
-      alert(`Appointment booked successfully! ${docRef.id}`);
-      resetState();
+      // alert(`Appointment booked successfully! ${docRef.id}`);
+      TNSFancyAlert.showSuccess(
+         "Success!",
+         `Appointment booked successfully! ${docRef.id}`,
+         "OK"
+      ).then(() => {
+         // bookingStore.selectedDoctor = null;
+         resetState();
+      });
    } catch (error: any) {
       console.error("Error saving appointment:", error);
       handleFirebaseError(error, errorMessage);
@@ -205,7 +213,7 @@ const handleTimeSlotSelection = (selectedSlot: string) => {
 
          <SVGView
             src="~/assets/svgs/heart.svg"
-            class="bg-main_blue text-center w-[100%] h-22 text-2xl text-gray-900 font-bold rounded-b-3xl"
+            class="bg-main_blue text-center w-[100%] text-2xl text-gray-900 font-bold rounded-b-2xl"
             row="0"
          />
 

@@ -56,7 +56,6 @@
                            time: appointment.time,
                         }"
                         @menuTap="handleMenuTap(appointment.id)"
-
                      />
                   </FlexboxLayout>
                </ScrollView>

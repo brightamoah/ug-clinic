@@ -204,6 +204,24 @@ export const useAuthStore = defineStore("AuthStore", () => {
       }
    };
 
+   const getDefaultRoute = () => {
+      if (isLoggedIn.value) {
+         return "/dashboard";
+      }
+      return "/";
+   };
+
+   const handleSignOut = async () => {
+      try {
+         await auth.signOut();
+         clearState();
+         routeTo(getDefaultRoute());
+         console.log("User signed out");
+      } catch (error) {
+         console.error("Error signing out:", error);
+      }
+   };
+
    const unsubscribeAuth = auth.addAuthStateChangeListener((user) => {
       if (user) {
          console.log("User is logged in:", user);
@@ -244,6 +262,8 @@ export const useAuthStore = defineStore("AuthStore", () => {
       validateName,
       handleRegister,
       handleLogin,
+      getDefaultRoute,
+      handleSignOut
    };
 });
 

@@ -20,6 +20,10 @@ const props = defineProps({
       type: Function,
       default: () => {},
    },
+   action: {
+      type: Function,
+      default: () => {},
+   }
 });
 </script>
 
@@ -44,6 +48,7 @@ const props = defineProps({
       <Label
          col="2"
          class="text-center ml-8 font-bold text-red-500 space-x-1"
+         @tap="props.action"
       >
          <FormattedString>
             <Span

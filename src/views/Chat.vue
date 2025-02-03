@@ -38,16 +38,16 @@
                         class="mx-2 items-center"
                      >
                         <GridLayout class="relative">
-                           <Image
+                           <NSImg
                               :src="user.avatar"
                               class="w-16 h-16 rounded-full"
                               stretch="aspectFill"
                            />
-                           <Label
+                           <NSLabel
                               class="w-3 h-3 bg-green-500 rounded-full absolute right-0 bottom-0 border-2 border-white"
                            />
                         </GridLayout>
-                        <Label
+                        <NSLabel
                            :text="user.name"
                            class="text-sm text-gray-700 mt-1"
                         />
@@ -61,7 +61,7 @@
                      v-for="chat in filteredChats"
                      :key="chat.id"
                      columns="auto, *, auto"
-                     class="mb-4 p-4 bg-white rounded-2xl shadow-sm"
+                     class="mb-1 p-4 bg-white rounded-2xl shadow-sm"
                      @tap="openChat(chat)"
                   >
                      <!-- Avatar -->
@@ -69,25 +69,25 @@
                         col="0"
                         class="relative mr-4"
                      >
-                        <Image
+                        <NSImg
                            :src="chat.avatar"
                            class="w-14 h-14 rounded-full"
                            stretch="aspectFill"
                         />
-                        <Label
+                        <NSLabel
                            v-if="chat.unread"
-                           class="w-5 h-5 bg-main_blue text-white text-xs rounded-full absolute -right-1 -top-1 text-center"
+                           class="w-6 h-6 bg-main_blue text-white text-base rounded-full text-center -translate-x-4 -translate-y-4 z-[9999]"
                            :text="chat.unread.toString()"
                         />
                      </GridLayout>
 
                      <!-- Chat Info -->
                      <StackLayout col="1">
-                        <Label
+                        <NSLabel
                            :text="chat.name"
                            class="font-semibold text-gray-800 mb-1"
                         />
-                        <Label
+                        <NSLabel
                            :text="chat.lastMessage"
                            class="text-sm text-gray-500 text-ellipsis"
                            textWrap="true"
@@ -100,12 +100,12 @@
                         col="2"
                         class="items-center"
                      >
-                        <Label
+                        <NSLabel
                            class="fas text-2xl text-main_blue p-2 mr-2"
                            text="&#xf095;"
                            @tap="makeCall(chat)"
                         />
-                        <Label
+                        <NSLabel
                            class="fas text-2xl text-main_blue p-2"
                            text="&#xf075;"
                            @tap="openChat(chat)"

@@ -3,6 +3,7 @@ import { ref } from "nativescript-vue";
 import { useRouter } from "router-vue-native";
 import { RoutePath } from "types/types";
 import Header from "~/components/home/Header.vue";
+import { useAuthStore } from "~/stores/AuthStore";
 import {
    chevronRight,
    userIcon,
@@ -19,6 +20,7 @@ import {
 } from "~/utils/icons";
 
 const router = useRouter();
+const authStore = useAuthStore();
 
 const pageInfo = ref({
    title: "Clinic Profile",
@@ -92,6 +94,7 @@ const navigateTo = (route: RoutePath) => {
          <Header
             row="0"
             v-bind="pageInfo"
+            @tap="authStore.handleSignOut()"
          />
 
          <ScrollView row="1">

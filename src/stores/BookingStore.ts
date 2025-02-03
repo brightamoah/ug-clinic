@@ -140,7 +140,7 @@ export const useBookingStore = defineStore("BookingStore", () => {
 
    const selectedDoctor = ref<Doctor | null>(null);
 
-   const setSelectedDoctor = (doctor: Doctor) => {
+   const setSelectedDoctor = async(doctor: Doctor) => {
       selectedDoctor.value = doctor;
       console.log(selectedDoctor.value);
    };
